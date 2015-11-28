@@ -12,7 +12,7 @@ ruby app.rb
 
 * /users
     * Get sample users
-* /resouces
+* /resources
     * Get Swagger specification
 
 ## With Swagger UI
@@ -20,7 +20,7 @@ ruby app.rb
 It can import Swagger specification to Swagger UI.
 
 1. Setup and launch Swagger UI on local.
-2. Input Swagger specification URL at `http://localhost:4567/resouces`.
+2. Input Swagger specification URL at `http://localhost:4567/resources`.
 3. Click `Explore`.
 
 Enjoy Swagger!!!

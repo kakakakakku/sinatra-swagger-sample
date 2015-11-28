@@ -17,7 +17,7 @@ get '/users' do
   ].to_json
 end
 
-get '/resouces' do
+get '/resources' do
   content_type :json
   swagger_json = File.open('./docs/swagger.json')
   swagger_json
