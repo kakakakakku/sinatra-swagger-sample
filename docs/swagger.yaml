@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: Sample API
+  description: This is my sample API
+  version: 1.0.0
+host: localhost:4567
+schemes:
+  - http
+basePath: /
+produces:
+  - application/json
+paths:
+  /users:
+    get:
+      summary: All users
+      description: All users
+      responses:
+        '200':
+          description: An array of users
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: User id
+      name:
+        type: string
+        description: User name
