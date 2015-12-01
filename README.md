@@ -12,6 +12,8 @@ ruby app.rb
 
 * /users
     * Get sample users
+* /users/:userId
+    * Find sample user
 * /resources
     * Get Swagger specification
 
