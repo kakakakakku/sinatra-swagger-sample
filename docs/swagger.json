@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Sample API",
-        "description": "This is my sample API",
+        "title": "Sinatra Swagger Sample API",
+        "description": "This is my Sinatra Swagger Sample API",
         "version": "1.0.0"
     },
     "host": "localhost:4567",
@@ -30,14 +30,42 @@
                     }
                 }
             }
+        },
+        "/users/{userId}": {
+            "get": {
+                "summary": "Find user",
+                "description": "Find user",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "users",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
         "User": {
             "type": "object",
             "properties": {
-                "id": {
+                "userId": {
                     "type": "integer",
+                    "format": "int64",
                     "description": "User id"
                 },
                 "name": {
